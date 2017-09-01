@@ -1,0 +1,398 @@
+/**
+ * ===============================================================
+ * Guide.
+ * ===============================================================
+ */
+
+// .row {
+//     border:1px solid red;
+// }
+
+// .columns {
+//     border: 1px solid blue;
+// }
+
+// .expanded, h1 {
+//     border:1px solid black;
+// }
+
+// .header,
+// .slogan,
+// .know-more,
+// h2 {
+//     border: 1px solid red;
+//     display: block;
+// }
+
+/**
+ * ===============================================================
+ * Base
+ * ===============================================================
+ */
+
+/**
+ * Variables.
+ */
+@main-font: 'Cervo', sans-serif;
+@sub-font: 'Patua One', cursive;
+@text-font-size: 12px;
+@text-color: #000000;
+@path-image: "../image";
+@path-node-modules: "../node_modules";
+@theme-blue: #57c8e1;
+@theme-pink: #ed218f;
+
+/**
+ * ===============================================================
+ * Base - functions
+ * ===============================================================
+ */
+
+/**
+ * Add box shadow.
+ * @param  {[type]} @size: 0             [description]
+ * @param  {[type]} @r:0   [description]
+ * @param  {[type]} @g:0   [description]
+ * @param  {[type]} @b:0   [description]
+ * @param  {[type]} @a:1   [description]
+ * @return {[type]}        [description]
+ */
+// .boxShadow(@h-shadow: 0; @v-shadow: 0; @blur: 0; @spread: 0; @r:0; @g:0; @b:0; @a:1) {
+//     -moz-box-shadow:    @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+//     -webkit-box-shadow: @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+//     box-shadow:         @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+// }
+//
+// Or better:
+// http://stackoverflow.com/questions/40317404/less-potentially-unhandled-rejection-2-no-matching-definition-was-found
+// http://lesscss.org/features/#mixins-parametric-feature-mixins-with-multiple-parameters
+.boxShadow(@h-shadow: 0; @v-shadow: 0; @blur: 0; @spread: 0; @rgba: 0, 0, 0, 1) {
+    @r: extract(@rgba, 1);
+    @g: extract(@rgba, 2);
+    @b: extract(@rgba, 3);
+    @a: extract(@rgba, 4);
+    -moz-box-shadow:    @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+    -webkit-box-shadow: @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+    box-shadow:         @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+}
+
+/**
+ * Adding animation.
+ * @param  {[type]} @speed: 0.25s         [description]
+ * @return {[type]}         [description]
+ */
+.transition(@speed: 0.25s) {
+    /*For Safari 3.1 to 6.0 */
+    -webkit-transition: @speed;
+    transition: @speed;
+}
+
+/**
+ * Adding fade in out effect on hover, etc.
+ * @param  {[type]} $property: color         [description]
+ * @param  {[type]} $time:     1s            [description]
+ * @param  {[type]} $method:   ease-in-out   [description]
+ * @return {[type]}            [description]
+ */
+.fadeInOut(@property: color, @time: 1s, @method: ease-in-out) {
+    -webkit-transition: @property @time @method;
+    -moz-transition: @property @time @method;
+    -ms-transition: @property @time @method;
+    -o-transition: @property @time @method;
+    transition: @property @time @method;
+}
+
+.changePlaceholderColour() {
+    color: #000000;
+    font-weight: bold;
+
+    font-family: @sub-font;
+    font-size: 24px;
+    font-style: italic;
+}
+
+/**
+ * ===============================================================
+ * Dependencies
+ * ===============================================================
+ */
+
+@import 'social-media.css';
+@import 'font-face.css';
+
+/**
+ * ===============================================================
+ * HTML
+ * ===============================================================
+ */
+html,
+body {
+  font-family: 'Cervo', sans-serif;
+}
+
+.bg-blue {
+    background-color: @theme-blue;
+}
+
+.align-centre {
+    text-align: center;
+}
+
+.font-cursive {
+    font-family: @sub-font;
+}
+
+/**
+ * ===============================================================
+ * Header
+ * ===============================================================
+ */
+h1 {
+    font-family: @main-font;
+    font-size: 54px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: @main-font;
+    font-size: 54px;
+}
+
+.header {
+    padding-top: 40px;
+
+}
+
+.slogan {
+    padding-bottom: 10px;
+    span {
+        font-size: 200px;
+        line-height: 160px;
+        display: block;
+    }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .slogan span {
+        font-size: 120px;
+        line-height: 100px;
+        /*border: 1px solid blue;*/
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .slogan span {
+        font-size: 160px;
+        line-height: 120px;
+        /*border: 1px solid green;*/
+    }
+}
+
+ul.social-media li {
+    // border:1px solid blue;
+    a {
+        padding: 5px;
+        display: inline-block;
+        font-size: 26px;
+        color: #000;
+    }
+}
+
+/**
+ * ===============================================================
+ * Main
+ * ===============================================================
+ */
+.know-more {
+    margin-top: -15px;
+    padding-bottom: 10px;
+    span {
+        font-family: @sub-font;
+        font-size: 72px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 72px;
+        letter-spacing: 4px;
+        background-color: #ed218f;
+        padding: 0 20px;
+    }
+    span.no-cutoff {
+        line-height: 86px;
+    }
+}
+
+.tell-us span {
+    font-family: @sub-font;
+    font-size: 36px;
+    font-style: italic;
+    line-height: 36px;
+    display: block;
+    padding: 0 20px;
+}
+
+hr {
+    margin-top: -15px;
+    border: 5px solid black;
+}
+
+.love-hear {
+    padding-top: 40px;
+}
+
+/**
+ * ===============================================================
+ * Main - forms
+ * ===============================================================
+ */
+.container-form-subscribe {
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+form.form-subscribe {
+    input.form-input {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 24px;
+        border: 1px solid #000000;
+    }
+}
+
+/*
+Change the Chrome autocomplete colour.
+https://codepen.io/team/css-tricks/pen/oxyJxR
+*/
+form.form-subscribe input.form-input:-webkit-autofill,
+form.form-comment input.form-input:-webkit-autofill {
+    border: 1px solid #000000;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+form.form-comment {
+    padding: 40px 20px;
+
+    input.form-input,
+    textarea.form-input {
+        background-color: @theme-blue;
+        color: #000000;
+        font-size: 24px;
+    }
+}
+
+.alert,
+.form-error {
+    font-size: 24px;
+}
+
+/*
+Change the placeholder colour.
+http://foundation.zurb.com/forum/posts/19004-customcss-file-doesnt-work--placeholder-color-cant-change
+https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css
+*/
+form.form-comment {
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        .changePlaceholderColour()
+    }
+
+    input:-moz-placeholder,
+    textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        .changePlaceholderColour()
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+        .changePlaceholderColour()
+    }
+
+    input:-ms-input-placeholder,
+    textarea::-ms-input-placeholder { /* Internet Explorer 10-11 */
+        .changePlaceholderColour()
+    }
+
+    input::-ms-input-placeholder,
+    textarea::-ms-input-placeholder { /* Microsoft Edge */
+        .changePlaceholderColour()
+    }
+}
+
+.button.button-send {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+
+    font-family: @sub-font;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+        background-color: #ed218f;
+    }
+}
+
+form.form-subscribe {
+    .button.button-send {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/**
+ * ===============================================================
+ * Others - Material Icons
+ * ===============================================================
+ */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.woff2') format('woff2'),
+    url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.woff') format('woff'),
+    url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+
+    &.md-80 {
+        font-size:80px;
+        line-height: 20px;
+    }
+}

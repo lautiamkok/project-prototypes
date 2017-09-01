@@ -1,0 +1,232 @@
+/* Main container */
+
+.main-container {
+    /*padding-bottom: 400px;*/
+}
+
+/* Anchor */
+
+.anchor-navbar {
+    /*position: fixed;*/
+    z-index: 99999;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    top: 0;
+
+    /* fallback */
+    background: #ffffff;
+
+    /* Transparent bg */
+    background: rgba(255, 255, 255, 0.9);
+
+    /* Use background image instead */
+    background-image: url(../images/Diamond-Eyes-White-Seamless-Textures.jpg);
+
+    /*border: 1px solid red;*/
+}
+
+.anchor-navbar > nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    /*text-align: center;*/
+}
+
+.anchor-navbar.invisible {
+    position: relative;
+}
+
+.anchor-navbar.invisible > nav {
+    float: none;
+}
+
+/* Pagination */
+
+/* https://www.w3schools.com/css/css3_pagination.asp */
+
+.pagination.custom {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+/*.pagination.custom > li {
+    margin: 10px;
+}*/
+
+.pagination.custom > li > a,
+.pagination.custom > li > span {
+    border: none;
+    color: #a8a9ab;
+    background: none;
+    /*border-top: 1px solid #ccc;
+    margin: 3px;*/
+}
+
+.pagination.custom > li:first-child > a,
+.pagination.custom > li:last-child > a,
+.pagination.custom > li:first-child > span,
+.pagination.custom > li:last-child > span {
+    border-radius: 0;
+}
+
+.pagination.custom > li > a:hover,
+.pagination.custom > li > span:hover {
+    color: #000000
+}
+
+.pagination.custom > li.active > a,
+.pagination.custom > li.active > span {
+    background: #cccccc;
+    color: #000000;
+    /*border: 1px solid #cccccc;*/
+}
+
+/* Sections */
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    /*padding-bottom: 40px;*/
+    /*border: 1px solid black;*/
+}
+
+.section-container {
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.section-paragraph {
+    padding-top: 20px;
+}
+
+.full-screen {
+    /*height: 100%;  makes panels the entire window height */
+
+    /* force the fullsceen height to grow for longer contents */
+    /* http://stackoverflow.com/questions/42225359/css-how-to-force-a-fullsceen-height-to-grow-for-longer-contents */
+    /* vh = viewport height || CSS3 */
+    /*min-height: 100vh;*/
+}
+
+.active {
+    background-color: #307FB5;
+}
+
+/* Animation stuff */
+
+.button-home-anchor {
+    display: inline-block;
+    width: 160px;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.anchor {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    color: #000;
+    z-index: 999999;
+    visibility: hidden;
+    /*border: 1px solid black;*/
+}
+
+.trigger {
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    z-index: 999999;
+    visibility: hidden;
+    /*border: 1px solid black;*/
+}
+
+.trigger.center {
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -25px;
+    margin-top: -10px;
+}
+
+.animation-placeholder {
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+div.diagonal-container {
+    /*border: 1px solid #000;*/
+    width: 300px;
+    height: 300px;
+    margin: 40px auto 20px auto;
+}
+
+.to-right {
+    background: linear-gradient(-65deg, transparent calc(50% - 1px), #666 50%, transparent calc(50% + 1px));
+}
+
+.to-left {
+    background: linear-gradient(65deg, transparent calc(50% - 1px), #666 50%, transparent calc(50% + 1px));
+}
+
+.to-verticle {
+    background: linear-gradient(90deg, transparent calc(50% - 1px), #666 50%, transparent calc(50% + 1px));
+}
+
+/* Carousal */
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+/* arrow */
+
+.up-down-arrow {
+    font-family: "Futura PT Book", Arial, sans-serif;
+    font-size: 50px;
+    color: #666;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+    display: inline-block;
+    /*border: 1px solid blue;*/
+}
+
+/* http://stackoverflow.com/questions/42409004/css-up-down-arrow */
+
+.animation-placeholder-arrow {
+    margin-top: 60px;
+}
+
+.arrow-container {
+    display: inline-block;
+    position:relative;
+    height:400px;
+    border-left:1px solid #666;
+}
+
+.arrow-container .arrow {
+    position:absolute;
+    left:-5px;
+    width: 9px;
+    height: auto;
+    fill: #666;
+}
+
+.arrow-container .arrow.up{
+    top:-9px;
+}
+
+.arrow-container .arrow.down{
+    bottom:-9px;
+}

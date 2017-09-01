@@ -1,0 +1,609 @@
+/* Dependencies */
+
+@import 'social-media.css';
+@import 'font-face.css';
+@import 'grid.css';
+@import 'finally.css';
+@import 'scroll-reveal.css';
+
+/* Global */
+
+html,
+body {
+    background-image: url(../images/Diamond-Eyes-White-Seamless-Textures.jpg);
+    /*background-image: url(../images/12513491_10153797329355396_5341851083234542333_o.jpg);*/
+    background-repeat:repeat;
+    font-family: "Apercu Regular", Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* General */
+
+.heading {
+    font-family: "Futura PT Book", Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+.font-size-xl {
+    font-size: 4.5em;
+}
+
+.font-size-lg {
+    font-size: 3em;
+}
+
+.font-size-md {
+    font-size: 1.5em;
+}
+
+/* Change container size */
+
+.container.container-xl {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: 0 auto;
+    /*border: 1px solid black;*/
+}
+
+/*==========  Mobile First Method  ==========*/
+/* https://scotch.io/tutorials/default-sizes-for-twitter-bootstraps-media-queries */
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .container.container-xl {
+        padding: 0 40px;
+        /*border: 1px solid yellow;*/
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .container.container-xl {
+        padding: 0 40px;
+        /*border: 1px solid black;*/
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .container.container-xl {
+        padding: 0 40px;
+        /*border: 1px solid blue;*/
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .container.container-xl {
+        padding: 0 40px;
+        /*border: 1px solid red;*/
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .container.container-xl {
+        padding: 0 40px;
+        /*border: 1px solid green;*/
+    }
+}
+
+/* Extra Large Devices, Wide Screens */
+@media only screen and (min-width: 1420px) {
+    .container.container-xl {
+        padding: 0 15px;
+        /*border: 1px solid orange;*/
+    }
+}
+
+/* Customise navbar */
+
+header .flex-center {
+    display: flex;
+    /* Vertical align: */
+    align-items: center;
+    /* Horizontal align: */
+    justify-content: center;
+}
+
+.button-home {
+    display: inline-block;
+}
+
+.button-toggle-menu {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border:none;
+    background: none;
+}
+
+ul.nav-menu-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*border: 1px solid red;*/
+}
+
+.nav-menu-items > li {
+    margin: 10px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    /*border: 1px solid blue;*/
+}
+
+.nav-menu-items > li > a {
+    padding: 5px 10px;
+    font-size: 20px;
+    color:#000000;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.nav-menu-items > li > a:hover {
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.nav-menu-items > .active {
+    background: none;
+}
+
+.nav-menu-items > .active > a,
+.nav-menu-items > .active > a:hover,
+.nav-menu-items > .active > a:focus {
+    color:#000000;
+    border: 1px solid #000000;
+}
+
+/* On large screen only - navbar */
+
+@media (min-width: 768px){
+
+    .nav-menu-items > li {
+        display: inline-block;
+    }
+
+}
+
+@media (min-width: 1200px){
+    header .flex-center {
+        height: 80px;
+    }
+}
+
+/* Keywords */
+
+.keyword-container {
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.keyword-inner-container {
+    display: inline-block;
+}
+
+.keyword-heading {
+    display: inline-block;
+    color:#7f7f7f;
+    font-size: 16px;
+    margin: 0; padding: 0;
+    text-transform: lowercase;
+}
+
+ul.navbar-keywords {
+    display: inline-block;nav-header
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.navbar-keywords li {
+    display: inline-block;
+    font-size: 16px;
+    color:#7f7f7f;
+    padding: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-transform: lowercase;
+}
+
+ul.navbar-keywords li > a {
+    font-size: 16px;
+    text-decoration: none;
+    color:#7f7f7f;
+}
+
+ul.navbar-keywords li > a:hover {
+    text-decoration: none;
+    color:#000000;
+}
+
+/* On very large screen only - keywords */
+
+@media (min-width: 1200px){
+    .keyword-container {
+        text-align: left;
+    }
+}
+
+/* Social media */
+
+.social-media-container {
+    display: inline-block;
+}
+
+ul.social-media {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+ul.social-media li {
+    /*width: 20px;*/
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid red;*/
+}
+
+ul.social-media li a {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+ul.social-media li a:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+ul.social-media li span {
+    padding: 3px;
+    display: inline-block;
+    /*border: 1px solid red;*/
+}
+
+ul.social-media li .button-facebook {
+    color: #457e9b;
+}
+
+ul.social-media li .button-twitter {
+    color: #62afd1;
+}
+
+/* On large screen only - social-media */
+
+@media (min-width: 1200px){
+    /* Right-aligning flex item */
+    /* http://stackoverflow.com/questions/22429003/right-aligning-flex-item */
+    /* http://stackoverflow.com/questions/19564287/css3-flex-pull-child-to-the-right */
+    ul.social-media {
+        margin-left: auto;
+    }
+}
+
+/* Footer */
+
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-container {
+    padding: 5px;
+}
+
+.copyright-footer {
+    display: block;
+    color: #7f7f7f;
+    padding-top: 5px;
+}
+
+.contact-footer:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    border: 0;
+    background: none;
+    box-shadow: none;
+    margin-bottom: 0;
+
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.navbar-default .navbar-nav.navbar-footer {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-default .navbar-nav.navbar-footer > li {
+    margin: 0;
+    padding: 0;
+    float:none;
+}
+
+.navbar-default .navbar-nav.navbar-footer > li > a {
+    font-family: "Apercu Regular", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color:#7f7f7f;
+    background: none;
+
+     -webkit-text-shadow: none;
+    text-shadow: none;
+    border: none;
+}
+
+.navbar-default .navbar-nav.navbar-footer > li > a:hover {
+    color: #7f7f7f;
+}
+
+.navbar-default .navbar-nav.navbar-footer {
+    padding: 0;
+}
+
+/* Social media footer */
+
+ul.social-media-footer {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+ul.social-media-footer li {
+    /*width: 20px;*/
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    /*border: 1px solid red;*/
+}
+
+ul.social-media-footer li a {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+ul.social-media-footer li a:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+ul.social-media-footer li span {
+    padding: 3px;
+    display: inline-block;
+    /*border: 1px solid red;*/
+}
+
+ul.social-media-footer li .button-facebook {
+    color: #457e9b;
+}
+
+ul.social-media-footer li .button-twitter {
+    color: #62afd1;
+}
+
+/* On large screen and onwards - footer */
+
+@media (min-width: 992px){
+    .navbar-default .navbar-nav.navbar-footer > li {
+        float: left;
+    }
+
+    .navbar-default .navbar-nav.navbar-footer > li > a {
+        padding: 5px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid transparent;
+    }
+
+    .navbar-default .navbar-nav.navbar-footer > li > a:hover {
+        border: 1px solid #7f7f7f;
+    }
+
+    ul.social-media-footer {
+        float: right;
+    }
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+/* https://scotch.io/tutorials/default-sizes-for-twitter-bootstraps-media-queries */
+
+
+/* Large Devices, Wide Screens */
+/*@media only screen and (max-width : 1200px) {
+    .container.container-xl {
+        padding: 0 40px;
+        border: 1px solid black;
+    }
+}*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .container.container-xl {
+        /*padding: 0 40px;
+        border: 4px solid red;*/
+    }
+
+    /*.navbar-default .navbar-nav.navbar-footer > li {
+        margin: 0;
+        padding: 0;
+        float: none;
+        border: 1px solid red;
+    }
+
+    .navbar-default .navbar-nav.navbar-footer > li > a {
+        padding: 0;
+        border: none;
+    }*/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .container.container-xl {
+        /*padding: 0 40px;
+        border: 1px solid green*/;
+    }
+}
+
+ /* Extra Small Devices, Phones */
+/*@media only screen and (max-width : 480px) {
+    .container.container-xl {
+        padding: 0 40px;
+        border: 1px solid orange;
+    }
+}*/
+
+/* Custom, iPhone Retina */
+/*@media only screen and (max-width : 320px) {
+    .container.container-xl {
+        padding: 0 40px;
+        border: 1px solid yellow;
+    }
+}*/
+
+/* Contact */
+
+.heading-contact {
+    font-family: 'Pacifico', cursive;
+    font-family: "Futura PT Book", Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+form.form-contact {
+    padding: 40px;
+    margin: 30px;
+    border: 1px solid #7f7f7f;
+
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.form-group {
+    display: block;
+    /*border: 1px solid blue;*/
+}
+
+.form-group > [class*='col-'] {
+    /*padding-right: 10px;
+    padding-left: 10px;*/
+}
+
+.control-label {
+    font-weight: normal;
+    font-family: "Apercu Regular", Arial, sans-serif;
+    font-size: 1.2em;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.dashed {
+    background: none;
+    box-shadow: none;
+    border: none;
+    /*border: 1px solid #cccccc;*/
+
+    /*border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;*/
+    /*border-bottom: 2px dashed;*/
+}
+
+.button-submit {
+    background: none;
+    color: #666666;
+    border:none;
+    font-size: 2em;
+    font-family:'Pacifico', cursive;
+    font-family: "Futura PT Book", Arial, sans-serif;
+}
+
+.button-submit:hover,
+.button-submit:focus,
+.button-submit:active {
+    background: none;
+    color: #000000;
+    border:none;
+
+    /* Reset */
+    /* http://stackoverflow.com/questions/39210985/remove-button-shadow */
+     background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.contact-container {
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+
+.contact-container ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-container ul li:last-child {
+    border-right: 0;
+}
+
+.contact-container ul li a{
+    color: #666666;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 320px),
+@media only screen and (min-width : 480px),
+@media only screen and (min-width : 768px) {
+    .contact-container ul li {
+        display: block;
+        font-size: 1.2em;
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+    }
+}
+
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/* Extra Large Devices, Wide Screens */
+@media only screen and (min-width : 992px),
+@media only screen and (min-width : 1200px),
+@media only screen and (min-width: 1420px) {
+    form.form-contact {
+        padding-right: 45px;
+    }
+    .contact-container ul li {
+        text-align: center;
+        display: inline-block;
+        font-size: 1.2em;
+        padding-right: 15px;
+        margin-right: 10px;
+        border-right: 1px solid #666666;
+    }
+}

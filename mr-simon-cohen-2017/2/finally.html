@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=500" />
+    <meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, tween, tweenmax" />
+    <meta name="author" content="Jan Paepke (www.janpaepke.de)" />
+    <title>Mr Simon Cohen</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <!-- CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- jQuery Mobile -->
+    <!-- <link rel="stylesheet" href="vendors/jquery-mobile/jquery.mobile-1.4.5.css" /> -->
+
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
+    <!-- jQuery -->
+    <script src="vendors/jquery-3.1.1.min.js"></script>
+
+    <!-- CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+
+    <!--  jQuery Migrate -->
+    <!-- https://github.com/jquery/jquery-migrate/#readme -->
+    <script src="vendors/jquery-migrate-3.0.0.js"></script>
+
+    <!-- CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script> -->
+
+    <!-- jQuery Mobile -->
+    <!-- <script src="vendors/jquery-mobile/jquery.mobile-1.4.5.js"></script> -->
+
+    <!-- CDN -->
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- CDN -->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <!-- Version 2.0.5 -->
+    <!-- minified -->
+    <!-- <script src="vendors/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script src="vendors/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="vendors/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="vendors/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
+
+    <!-- uncompressed -->
+    <script type="text/javascript" src="vendors/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="vendors/greensock-js/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <!-- ScrollMagic -->
+    <!-- CDN -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+
+    <!-- Animate CSS -->
+    <!-- https://github.com/daneden/animate.css -->
+    <link rel="stylesheet" href="vendors/animate.css">
+
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+    <!-- Local -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/shuffle.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <header role="navigation">
+
+        <div class="container container-xl">
+            <div class="row">
+
+                <div class="col-lg-11">
+                    <nav class="nav-header">
+
+                        <div class="col-lg-4">
+                            <div class="flex-center">
+                                <a class="button-home" href="#">
+                                    <img src="images/logo-mr-simon-cohen.png" class="img-responsive" />
+                                </a>
+                            </div>
+
+                            <div class="visible-xs">
+                                <div class="flex-center">
+                                    <button class="button-toggle-menu" data-toggle="collapse" data-target="#navbar">
+                                        <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 flex-center">
+                            <ul class="nav-menu-items navbar-collapse collapse" id="navbar">
+                              <li><a href="#">My Story </a></li>
+                              <li><a href="#">Speaking </a></li>
+                              <li><a href="#">TV &amp; Radio</a></li>
+                              <li><a href="#">Why?</a></li>
+                              <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+
+                <div class="col-lg-1 container-social-media flex-center">
+                    <ul class="social-media">
+                        <li><a href="#" target="_blank" title="Facebook" class="button-facebook"><span class="icon-facebook"></span></a></li>
+                        <li><a href="#" target="_blank" title="Twitter" class="button-twitter"><span class="icon-twitter"></span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <main role="main">
+
+        <div class="container container-xl">
+            <div class="row">
+                <div class="keyword-container">
+                    <div class="keyword-inner-container">
+                        <h3 class="keyword-heading">Mosaic magic:</h3>
+                        <ul class="navbar-keywords" style="">
+                            <li class="col-sm-3x"><a href="#">Family</a></li>
+                            <li class="col-sm-3x"><a href="#">Leadership</a></li>
+                            <li class="col-sm-3x"><a href="#">Wisdom</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-xl">
+
+            <div class="row">
+
+                <section class="half-screen">
+                    <div class="container section-container">
+                        <ul class="word-items">
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 1</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 2</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 3</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 4</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 5</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 6</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 7</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 8</span></a></li>
+                            <li class="word-item"><a href="#123"><span class="font-size-xl">surprise 9</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#123" class="grid-itemx" style="background-image:url('http://placehold.it/800x600')">
+                        <img class="img-responsive" src="http://placehold.it/800x600" alt="">
+                        <span class="item-title-overlay">the other 9/11</span>
+                    </a> -->
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container container-xl">
+            <div class="row">
+                <div class="footer-container">
+
+                    <div class="col-md-4">
+                        <p class="copyright-footer">&copy; Mr Simon Cohen 2017</p>
+                    </div>
+
+                    <div class="col-md-7">
+                        <nav class="navbar navbar-default navbar-default-footer">
+                            <ul class="nav navbar-nav navbar-footer">
+                              <li class="activex"><a href="#">My Story </a></li>
+                              <li><a href="#">Speaking </a></li>
+                              <li><a href="#">TV &amp; Radio</a></li>
+                              <li><a href="#">Why?</a></li>
+                              <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-md-1">
+                        <ul class="social-media-footer">
+                            <li><a href="#" target="_blank" title="Facebook" class="button-facebook"><span class="icon-facebook"></span></a></li>
+                            <li><a href="#" target="_blank" title="Twitter" class="button-twitter"><span class="icon-twitter"></span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=500" />
+    <meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, tween, tweenmax" />
+    <meta name="author" content="Jan Paepke (www.janpaepke.de)" />
+    <title>Mr Simon Cohen</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="vendors/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <!-- CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- jQuery Mobile -->
+    <!-- <link rel="stylesheet" href="vendors/jquery-mobile/jquery.mobile-1.4.5.css" /> -->
+
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
+    <!-- jQuery -->
+    <script src="vendors/jquery-3.1.1.min.js"></script>
+
+    <!-- CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+
+    <!--  jQuery Migrate -->
+    <!-- https://github.com/jquery/jquery-migrate/#readme -->
+    <script src="vendors/jquery-migrate-3.0.0.js"></script>
+
+    <!-- CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script> -->
+
+    <!-- jQuery Mobile -->
+    <!-- <script src="vendors/jquery-mobile/jquery.mobile-1.4.5.js"></script> -->
+
+    <!-- CDN -->
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="vendors/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- CDN -->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+    <!-- Version 2.0.5 -->
+    <!-- minified -->
+    <!-- <script src="vendors/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script src="vendors/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="vendors/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="vendors/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
+
+    <!-- uncompressed -->
+    <script type="text/javascript" src="vendors/greensock-js/src/minified/TweenMax.min.js"></script>
+    <script type="text/javascript" src="vendors/greensock-js/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="vendors/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <!-- ScrollMagic -->
+    <!-- CDN -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
+
+    <!-- Animate CSS -->
+    <!-- https://github.com/daneden/animate.css -->
+    <link rel="stylesheet" href="vendors/animate.css">
+
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+    <!-- Local -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scroll-reveal.js"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <header role="navigation">
+
+        <div class="container container-xl">
+        <div class="row">
+          <nav class="navbar navbar-default">
+          <!-- <div class="container-fluid"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="brand brand-name navbar-left button-home" href="#"><img src="images/logo-mr-simon-cohen.png" class="img-responsive" /></a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-rightx">
+                  <li class="activex"><a href="#">My Story </a></li>
+                  <li class="active"><a href="#">Speaking </a></li>
+                  <li><a href="#">TV &amp; Radio</a></li>
+                  <li><a href="#">Why?</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+
+                <ul class="social-media">
+                    <li><a href="#" target="_blank" title="Facebook" class="button-facebook"><span class="icon-facebook"></span></a></li>
+                    <li><a href="#" target="_blank" title="Twitter" class="button-twitter"><span class="icon-twitter"></span></a></li>
+                </ul>
+            </div>
+
+          <!-- </div> -->
+        </nav>
+
+        </div>
+        </div>
+
+
+
+    </header>
+
+    <main role="main" id="main" class="main-container">
+
+        <div class="container container-xl" >
+
+            <div class="row anchor-parent">
+
+                <div class="anchor-navbar" id="anchor-navbar">
+
+                  <a class="button-home-anchor" href="#"><img src="images/logo-mr-simon-cohen.png" class="img-responsive" /></a>
+
+                  <nav aria-label="Page navigation">
+                    <ul class="pagination custom pagination-lg justify-content-end">
+                      <li id="high1" class="page-item"><a class="page-link" href="#anchor-1">1</a></li>
+                      <li id="high2" class="page-item"><a class="page-link" href="#anchor-2">2</a></li>
+                      <li id="high3" class="page-item"><a class="page-link" href="#anchor-3">3</a></li>
+                      <li id="high4" class="page-item"><a class="page-link" href="#anchor-4">4</a></li>
+                      <li id="high5" class="page-item"><a class="page-link" href="#anchor-5">5</a></li>
+                      <li id="high6" class="page-item"><a class="page-link" href="#anchor-6">6</a></li>
+                      <li id="high7" class="page-item"><a class="page-link" href="#anchor-7">7</a></li>
+                      <li id="high8" class="page-item"><a class="page-link" href="#anchor-8">8</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- section-1 -->
+        <section class="full-screen section-1">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-1">anchor 1</a>
+
+              <div id="section1-heading1" class="animation-placeholder animated fadeIn">
+                <h2 class="heading font-size-lg">It might seem crazy, what I’m about to say...</h2>
+              </div>
+
+              <div id="section1-video1" class="animation-placeholder animated fadeIn">
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                   <iframe src="https://player.vimeo.com/video/137638868" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow">
+                  <div class="trigger center" id="section1-arrow1-trigger">trigger</div>
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- section-2 -->
+          <section class="full-screen section-2">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-2">anchor 2</a>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section2-heading1-trigger">trigger</div>
+                <h2 class="heading font-size-lg" id="section2-heading1">I speak my heart. My truth. My way...</h2>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section2-arrow1">
+                  <div class="trigger center" id="section2-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- section-3 -->
+          <section class="full-screen section-3">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-3">anchor 3</a>
+              <div class="animation-placeholder">
+                <div class="trigger" id="section3-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section3-heading1">I've given myself and others Pause for Thought on Radio 2...</h2>
+              </div>
+
+              <div id="section3-video1" class="animation-placeholder">
+                <div class="trigger" id="section3-video1-trigger">trigger</div>
+
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="http://www.bbc.co.uk/programmes/p01kjbcb/player" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section3-arrow1">
+                  <div class="trigger center" id="section3-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- section-4 -->
+          <section class="full-screen section-4">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-4">anchor 4</a>
+              <div class="animation-placeholder">
+                <div class="trigger" id="section4-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section4-heading1">I've spoken at some pretty cool places...</h2>
+              </div>
+
+              <div id="section4-carousel1" class="animation-placeholder">
+                  <div class="trigger" id="section4-carousel1-trigger">trigger</div>
+
+                  <!-- carousal -->
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="media/simon cohen rosie perez2.jpg" alt="">
+
+                        <div class="container">
+                          <div class="carousel-caption">
+                            <h3>Example headline 1.</h3>
+                            <p>Note 1: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="item">
+                        <img src="media/12513491_10153797329355396_5341851083234542333_o.jpg" alt="">
+
+                        <div class="container">
+                          <div class="carousel-caption">
+                            <h3>Example headline 2.</h3>
+                            <p>Note 2: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <!-- carousal -->
+
+              </div>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section4-paragraph1-trigger">trigger</div>
+
+                <div class="section-paragraph" id="section4-paragraph1">
+                    <p class="font-size-md">Cannes Lions International Festival of Creativity (Cannes); United Nations (New York) Wilderness Festival (Oxfordshire); World Youth Summit (London); UNESCO (Bangkok); World Economic Forum (Jordan); ASCL National Conference (Birmingham); Sustainability Leaders Forum (London); UK Speechwriters Guild (London); Martin Luther King Jr Chapel (Atlanta); Just Peace Summit (New York): TEDx host / MC (New York, Uganda); We Are Family Foundation Gala host/ MC (New York); Universal Forum of Cultures (Mexico); Parliament of World Religions (Barcelona); World Spirit Forum (Switzerland); TEDx speaker (Rome, London, Budapest, New York); Cambridge University (Cambridge); Georgetown University (Washington); Initiatives of Change (London); International Communications Forum;  Religion and Employment (Australia); Temple of Understanding (New York)</p>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section4-arrow1">
+                  <div class="trigger center" id="section4-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+
+          </section>
+
+          <!-- section-5 -->
+          <section class="full-screen section-5">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-5">anchor 5</a>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section5-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section5-heading1">I speak with the media about leadership, ethics and business-as-unusual...</h2>
+              </div>
+
+              <div id="section5-video1" class="animation-placeholder">
+                <div class="trigger" id="section5-video1-trigger">trigger</div>
+
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                   <iframe src="https://www.youtube.com/embed/QVGeilNsJFU" frameborder="0" allowfullscreen></iframe>
+                   <iframe src="https://player.vimeo.com/video/84052365" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section5-paragraph1-trigger">trigger</div>
+
+                <div class="section-paragraph" id="section5-paragraph1">
+                  <p class="font-size-md">Sky News;  ITV; BBC News; BBC Radio 2; BBC Radio 4; BBC Radio 5; BBC World Service; Did I say BBC? The Guardian; Fox Business; Studio 10; CBC; Newsweek/Washington Post; Harvard Business Review; Entrepreneur; The Independent; The Huffington Post</p>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section5-arrow1">
+                  <div class="trigger center" id="section5-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+
+          <!-- section-6 -->
+          <section class="full-screen section-6">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-6">anchor 6</a>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section6-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section6-heading1">From the podium I speak about everything from leadership to Jedi Knights; ethics in current affairs to non-violence, wisdom and the 'other 9/11'</h2>
+              </div>
+
+              <div id="section6-image1" class="animation-placeholder">
+                <div class="trigger" id="section6-image1-trigger">trigger</div>
+
+                <img class="img-responsive" src="media/20130529-DSC_0460.jpg" alt="">
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section6-arrow1">
+                  <div class="trigger center" id="section6-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- section-7 -->
+          <section class="full-screen section-7">
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-7">anchor 7</a>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section7-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section7-heading1">People are kind...</h2>
+              </div>
+
+              <div id="section7-image1" class="animation-placeholder">
+                <div class="trigger" id="section7-image1-trigger">trigger</div>
+                <img class="img-responsive" src="media/20130529-DSC_0397.jpg" alt="">
+              </div>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section7-paragraph1-trigger">trigger</div>
+
+                <div class="section-paragraph" id="section7-paragraph1">
+                  <p class="font-size-md">
+                  "Absolutely brilliant - a great guy and a deep thinker"<br/>
+                  - Chris Evans<br/><br/>
+
+                  Trendhunter:<br/>
+                  "The most popular talk 6 months running"<br/>
+                  "I want to follow him"<br/>
+                  - Robbie Williams<br/><br/>
+
+                  Amazing, Amazing<br/>
+                  - David Williams
+                  </p>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section7-arrow1">
+                  <div class="trigger center" id="section7-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container">
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- section-8 -->
+          <section class="full-screen section-8">
+
+            <div class="container section-container">
+
+              <a class="anchor" id="anchor-8">anchor 8</a>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section8-heading1-trigger">trigger</div>
+
+                <h2 class="heading font-size-lg" id="section8-heading1">I’d love to speak...</h2>
+              </div>
+
+              <div id="section8-image1" class="animation-placeholder">
+                <div class="trigger" id="section8-image1-trigger">trigger</div>
+                <img class="img-responsive" src="media/DBA_9867.JPG" alt="">
+              </div>
+
+              <div class="animation-placeholder">
+                <div class="trigger" id="section8-paragraph1-trigger">trigger</div>
+
+                <div class="section-paragraph" id="section8-paragraph1">
+                  <p class="font-size-md">Email me: <a href="mailto:info@mrsimoncohen.com">info@mrsimoncohen.com</a></p>
+                </div>
+              </div>
+
+              <div class="animation-placeholder animation-placeholder-arrow" id="section8-arrow1">
+                  <div class="trigger center" id="section8-arrow1-trigger">trigger</div>
+
+                  <div class="arrow-container"><!--
+                    <svg class="arrow up" viewbox="0 0 7 10">
+                      <path d="M3.5 0 L7 10 Q3.5 7 0 10z"/>
+                    </svg>
+                    <svg class="arrow down" viewbox="0 0 7 10">
+                      <path d="M3.5 10 L7 0 Q3.5 3 0 0z"/>
+                    </svg> -->
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container container-xl">
+            <div class="row">
+                <div class="footer-container">
+
+                    <div class="col-sm-3">
+                        <p class="copyright-footer">&copy; Mr Simon Cohen 2017</p>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <nav class="navbar navbar-default">
+                          <div class="container-fluid">
+                            <ul class="nav navbar-nav navbar-footer">
+                              <li class="activex"><a href="#">My Story </a></li>
+                              <li><a href="#">Speaking </a></li>
+                              <li><a href="#">TV &amp; Radio</a></li>
+                              <li><a href="#">Why?</a></li>
+                              <li><a href="#">Contact</a></li>
+                            </ul>
+
+                            <ul class="social-media-footer">
+                                <li><a href="#" target="_blank" title="Facebook" class="button-facebook"><span class="icon-facebook"></span></a></li>
+                                <li><a href="#" target="_blank" title="Twitter" class="button-twitter"><span class="icon-twitter"></span></a></li>
+                            </ul>
+
+                          </div>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

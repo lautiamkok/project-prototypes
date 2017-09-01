@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Apercu Bold';
+    src: url('../fonts/apercu_bold.eot');
+    src: url('../fonts/apercu_bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu_bold.woff2') format('woff2'),
+    url('../fonts/apercu_bold.woff') format('woff'),
+    url('../fonts/apercu_bold.ttf') format('truetype'),
+    url('../fonts/apercu_bold.svg#.') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Regular';
+    src: url('../fonts/apercu_regular.eot');
+    src: url('../fonts/apercu_regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu_regular.woff2') format('woff2'),
+    url('../fonts/apercu_regular.woff') format('woff'),
+    url('../fonts/apercu_regular.ttf') format('truetype'),
+    url('../fonts/apercu_regular.svg#.') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu Regular Italic';
+    src: url('../fonts/apercu_regular_italic.eot');
+    src: url('../fonts/apercu_regular_italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/apercu_regular_italic.woff2') format('woff2'),
+    url('../fonts/apercu_regular_italic.woff') format('woff'),
+    url('../fonts/apercu_regular_italic.ttf') format('truetype'),
+    url('../fonts/apercu_regular_italic.svg#.') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('../fonts/FuturaPT-Book.eot');
+    src: url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Book.woff') format('woff'),
+    url('../fonts/FuturaPT-Book.ttf') format('truetype'),
+    url('../fonts/FuturaPT-Book.svg#FuturaPT-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.heading {
+    font-family: "Futura PT Book", Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+.font-size-xl {
+    font-size: 6em;
+}
+
+.font-size-lg {
+    font-size: 4em;
+}
+
+.font-size-md {
+    font-size: 2em;
+}
+
+/* Change container size */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1420px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+html,
+body {
+    font-family: "Apercu Regular", Arial, sans-serif;
+    /*font-size: 20px;*/
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    padding: 0;
+    margin: 0;
+    background: #000000; /* fallback */
+    background: rgba(0, 0, 0, 0.7);
+}
+
+header > nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+header.invisible {
+    position: relative;
+}
+
+header.invisible > nav {
+    float: none;
+}
+
+
+/* Pagination */
+/* https://www.w3schools.com/css/css3_pagination.asp */
+
+.pagination.custom {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination.custom > li > a,
+.pagination.custom > li > span {
+    border: none;
+    color: #a8a9ab;
+    background: none;
+}
+
+.pagination.custom > li:first-child > a,
+.pagination.custom > li:last-child > a,
+.pagination.custom > li:first-child > span,
+.pagination.custom > li:last-child > span {
+    border-radius: 0;
+}
+
+.pagination.custom > li > a:hover,
+.pagination.custom > li > span:hover {
+    color: #fff
+}
+
+.pagination.custom > li.active > a,
+.pagination.custom > li.active > span {
+    background: #000;
+    color: #fff;
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid black;
+}
+
+.section-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-paragraph {
+    padding-top: 20px;
+}
+
+.full-screen {
+/*height: 100%;  makes panels the entire window height */
+
+/* force the fullsceen height to grow for longer contents */
+/* http://stackoverflow.com/questions/42225359/css-how-to-force-a-fullsceen-height-to-grow-for-longer-contents */
+/* vh = viewport height || CSS3 */
+    min-height: 100vh;
+}
+
+.active {
+    background-color: #307FB5;
+}
+
+/* Animation stuff */
+
+.anchor {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    color: #000;
+    z-index: 999999;
+    /*visibility: hidden;*/
+    border: 1px solid black;
+}
+
+.trigger {
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    z-index: 999999;
+    /*visibility: hidden;*/
+    border: 1px solid black;
+}
+
+.animation-placeholder {
+    position: relative;
+    border: 1px solid red;
+}
+
+/* Carousal */
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+footer {
+    height: 100%;
+    border: 1px solid black;
+}

@@ -1,0 +1,26 @@
+.word-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.word-items .word-item {
+    display: inline-block;
+    padding: 10px;
+}
+
+.word-items .word-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.word-items .word-item a:hover {
+    color: #7f7f7f;
+}
+
+.half-screen {
+    /* force the fullsceen height to grow for longer contents */
+    /* http://stackoverflow.com/questions/42225359/css-how-to-force-a-fullsceen-height-to-grow-for-longer-contents */
+    /* vh = viewport height || CSS3 */
+    min-height: 60vh;
+}
